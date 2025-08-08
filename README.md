@@ -37,7 +37,7 @@ Solve the Errors: Go back to VS Code and open the bugs.js file. Your task is to 
 
 Check Your Progress: As you fix an error and save the bugs.js file, Live Server will automatically reload the page in your browser. Watch the console to see the errors disappear!
 
-## Uploading instructions
+# Uploading instructions
 Once you've completed all the challenges, feel free to upload this assignment and use the github pages to show your working code, this way we can load up the application and see your resolved code, and it gives you a place to find where you might have solved an error in the past ands what it means if you ever forget.
 
 How to Host a Website on GitHub Pages
