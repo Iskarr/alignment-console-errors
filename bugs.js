@@ -8,7 +8,7 @@
 // ERROR #1: ReferenceError - undefinedVariable
 function test1() {
   // FIX: Declare this variable before using it
-
+  
   console.log(undefinedVariable); // FIX: Declare this variable first
   return true;
 }
@@ -16,13 +16,13 @@ function test1() {
 // ERROR #2: TypeError - null property access
 function test2() {
   let obj = null;
-  console.log(obj.name); // FIX: Check if obj is null before accessing properties
+  console.log(obj.name); // FIX: Check if obj is null before accessing properties, reassign it
   return true;
 }
 
 // ERROR #3: SyntaxError - missing closing parenthesis
 function test3() {
-  let test = console.log"This is a test"; // FIX: Add the missing parenthesis
+  let test = console.log"This is a test"; // FIX: Add the missing parenthesis 
   return test; // FIX: Add missing closing parenthesis
 }
 
@@ -35,24 +35,24 @@ function test4() {
 // ERROR #5: TypeError - not a function
 function test5() {
   let notAFunction = "I'm a string";
-  return notAFunction(); // FIX: Make this actually callable
+  return notAFunction();
 }
 
 // ERROR #6: ReferenceError - variable not declared
 function test6() {
-  console.log(variableNotDeclared); // FIX: Declare this variable
+  console.log(variableNotDeclared); 
   return true;
 }
 
 // ERROR #7: TypeError - undefined method call
 function test7() {
   let obj = undefined;
-  return obj.someMethod(); // FIX: Define obj and its method
+  return obj.someMethod(); 
 }
 
 // ERROR #8: SyntaxError - unexpected token
 function test8() {
-  let validObject =  key: "value" ; // FIX: Remove extra closing brace
+  let validObject =  key: "value" ; 
   return validObject.key;
   s;
 }
@@ -60,20 +60,20 @@ function test8() {
 // ERROR #9: TypeError - const reassignment
 function test9() {
   const constantValue = "original";
-  constantValue = "changed"; // FIX: Don't reassign const variables
+  constantValue = "changed"; 
   return constantValue;
 }
 
 // ERROR #10: TypeError - property access on undefined
 function test10() {
   let arr = undefined;
-  return arr.length; // FIX: Define arr or check for undefined
+  return arr.length;
 }
 
 // ERROR #11: RangeError - stack overflow (infinite recursion)
 function test11() {
   function infiniteLoop(n) {
-    return infiniteLoop(n + 1); // FIX: Add a base case to stop recursion
+    return infiniteLoop(n + 1); 
   }
   return infiniteLoop(0);
 }
@@ -81,26 +81,26 @@ function test11() {
 // ERROR #12: TypeError - converting undefined to object
 function test12() {
   let value = undefined;
-  return value.toString(); // This will throw a TypeError: Cannot read properties of undefined (reading 'toString')
+  return value.toString();
 }
 
 // ERROR #13: SyntaxError - invalid JSON
 function test13() {
-  let invalidJSON = '{key: "value"}'; // FIX: JSON keys must be quoted
+  let invalidJSON = '{key: "value"}'; 
   return JSON.parse(invalidJSON);
 }
 
 // ERROR #14: ReferenceError - temporal dead zone
 function test14() {
-  console.log(hoistedVar); // FIX: Move this line after the declaration
+  console.log(hoistedVar); 
   let hoistedVar = "I exist now";
   return hoistedVar;
 }
 
 // ERROR #15: TypeError - primitive value method call
 function test15() {
-  let num = Number42; // This returns a primitive, not an object
-  return num.valueOf(); // FIX: Use new Number(42) to create an object
+  let num = Number42;
+  return num.valueOf();
 }
 
 // ==================== END BUGS.JS FILE ====================
