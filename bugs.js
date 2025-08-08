@@ -16,7 +16,7 @@ function test1() {
 // ERROR #2: TypeError - null property access
 function test2() {
   let obj = null;
-  console.log(obj.name); // FIX: Check if obj is null before accessing properties, reassign it
+  console.log(obj.name); // FIX: Check if obj is null before accessing properties, reassign it to fix.
   return true;
 }
 
